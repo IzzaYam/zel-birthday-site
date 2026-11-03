@@ -365,3 +365,1065 @@
             justify-content: space-around;
             align-items: center;
             box-shadow: 0 5px 20px rgba(132, 51, 76, 0.04);
+        }
+
+        .countdown-title {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .countdown-timers {
+            display: flex;
+            gap: 40px;
+            text-align: center;
+        }
+
+        .time-box .number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            line-height: 1;
+        }
+
+        .time-box .label {
+            font-size: 0.65rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #9C6A76;
+            margin-top: 5px;
+        }
+
+        /* Party Details Section */
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-header h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.2rem;
+            color: var(--primary-color);
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+        }
+
+        .section-header p {
+            font-size: 0.9rem;
+            color: #7A4C58;
+        }
+
+        .details-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            max-width: 950px;
+            margin: 0 auto 80px auto;
+            padding: 0 20px;
+        }
+
+        .detail-card {
+            background: rgba(255, 255, 255, 0.85);
+            border: 1px solid var(--border-pink);
+            border-radius: 12px;
+            padding: 25px 15px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(132, 51, 76, 0.03);
+        }
+
+        .detail-icon-circle {
+            width: 50px;
+            height: 50px;
+            background: var(--light-pink);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px auto;
+            color: var(--primary-color);
+            font-size: 1.1rem;
+        }
+
+        .detail-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            color: var(--primary-color);
+            margin-bottom: 12px;
+            text-transform: uppercase;
+        }
+
+        .detail-card p {
+            font-size: 0.85rem;
+            line-height: 1.6;
+            color: #7A4C58;
+        }
+
+        /* INFINITE MARQUEE MOVING GALLERY SECTION */
+        .marquee-section {
+            overflow: hidden;
+            width: 100%;
+            padding: 20px 0;
+            background: rgba(255, 255, 255, 0.5);
+            border-top: 1px solid var(--border-pink);
+            border-bottom: 1px solid var(--border-pink);
+            margin-bottom: 60px;
+        }
+
+        .marquee-track {
+            display: flex;
+            width: max-content;
+            animation: scrollLeft 35s linear infinite;
+        }
+
+        .marquee-track:hover {
+            animation-play-state: paused;
+        }
+
+        .marquee-item {
+            background: #ffffff;
+            padding: 8px 8px 25px 8px;
+            width: 180px;
+            margin-right: 20px;
+            box-shadow: 0 5px 15px rgba(132, 51, 76, 0.08);
+            flex-shrink: 0;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .marquee-item:hover {
+            transform: scale(1.05);
+        }
+
+        .marquee-item img {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+        }
+
+        @keyframes scrollLeft {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* Interactive Sections (Message & Gift) */
+        .interactive-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            max-width: 1100px;
+            margin: 0 auto 100px auto;
+            padding: 0 20px;
+        }
+
+        .card-box {
+            background: rgba(255, 255, 255, 0.92);
+            border: 1px solid var(--border-pink);
+            border-radius: 16px;
+            padding: 40px 30px;
+            box-shadow: 0 5px 25px rgba(132, 51, 76, 0.04);
+            position: relative;
+        }
+
+        .card-box h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 8px;
+        }
+
+        .card-box .box-sub {
+            text-align: center;
+            font-size: 0.85rem;
+            color: #7A4C58;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            color: var(--primary-color);
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--border-pink);
+            border-radius: 8px;
+            background: var(--light-pink);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.85rem;
+            color: var(--text-dark);
+            outline: none;
+        }
+
+        .form-control:focus {
+            border-color: var(--primary-color);
+        }
+
+        textarea.form-control {
+            resize: vertical;
+            height: 100px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 14px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+
+        .submit-btn:hover {
+            opacity: 0.9;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid var(--border-pink);
+            font-size: 0.8rem;
+            color: #8C5A66;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1100px;
+            margin: 0 auto;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        /* Modals */
+        .custom-modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(90, 42, 56, 0.7);
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-card {
+            background: #ffffff;
+            padding: 35px;
+            border-radius: 16px;
+            width: 90%;
+            max-width: 450px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            border: 1px solid var(--border-pink);
+            position: relative;
+        }
+
+        .modal-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 24px;
+            color: var(--primary-color);
+            cursor: pointer;
+        }
+
+        .terms-box {
+            font-size: 0.75rem;
+            color: #7A4C58;
+            background: var(--light-pink);
+            padding: 10px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            max-height: 100px;
+            overflow-y: auto;
+            line-height: 1.4;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 0.8rem;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+        }
+
+        .checkbox-group input {
+            margin-top: 3px;
+        }
+
+        .admin-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            font-size: 0.8rem;
+        }
+
+        .admin-table th, .admin-table td {
+            border: 1px solid var(--border-pink);
+            padding: 8px;
+            text-align: left;
+        }
+
+        .admin-table th {
+            background-color: var(--light-pink);
+            color: var(--primary-color);
+        }
+
+        /* Lightbox Modal */
+        .lightbox-modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(90, 42, 56, 0.85);
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(8px);
+        }
+
+        .lightbox-content {
+            max-width: 90%;
+            max-height: 85vh;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            border: 4px solid #fff;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 25px;
+            right: 35px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: none;
+            font-size: 30px;
+            padding: 10px 18px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+        .lightbox-prev { left: 30px; }
+        .lightbox-next { right: 30px; }
+
+        .hover-heart-img {
+            position: relative;
+        }
+
+        /* SINGLE CLEAN MOBILE RESPONSIVE ADJUSTMENTS */
+        @media (max-width: 768px) {
+            html, body {
+                width: 100% !important;
+                overflow-x: hidden !important;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+
+            nav {
+                flex-direction: column !important;
+                padding: 10px 5px !important;
+                gap: 6px !important;
+                align-items: center !important;
+            }
+
+            .nav-links {
+                display: flex !important;
+                gap: 8px !important;
+                font-size: 0.65rem !important;
+                flex-wrap: wrap !important;
+                justify-content: center !important;
+            }
+
+            /* HERO SECTION - SAKTO SA GITNA ANG POLAROID-TEXT-CAKE */
+            .hero-section {
+                display: flex !important;
+                flex-direction: row !important;
+                justify-content: space-between !important;
+                align-items: center !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                box-sizing: border-box !important;
+                padding: 10px 2px !important;
+                margin: 0 auto !important;
+                gap: 2px !important;
+                flex-wrap: nowrap !important;
+            }
+
+            .hero-polaroid-wrapper {
+                flex: 0 0 27% !important;
+                max-width: 27% !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                display: flex !important;
+                justify-content: center !important;
+            }
+
+            .polaroid-container {
+                width: 100% !important;
+                max-width: 90px !important;
+                margin: 0 auto !important;
+                padding: 2px !important;
+                box-sizing: border-box !important;
+            }
+
+            .polaroid-img-wrapper {
+                height: 90px !important;
+            }
+
+            .side-handwriting {
+                display: none !important;
+            }
+
+            .hero-content {
+                flex: 0 0 44% !important;
+                max-width: 44% !important;
+                padding: 0 2px !important;
+                margin: 0 !important;
+                text-align: center !important;
+                box-sizing: border-box !important;
+            }
+
+            .hero-content h1 {
+                font-size: 0.75rem !important;
+                line-height: 1.1 !important;
+            }
+
+            .hero-content h1 span {
+                font-size: 0.95rem !important;
+            }
+
+            .hero-content p {
+                font-size: 0.42rem !important;
+                line-height: 1.1 !important;
+                margin-bottom: 3px !important;
+            }
+
+            .cta-btn {
+                padding: 3px 6px !important;
+                font-size: 0.42rem !important;
+            }
+
+            .hero-right-image-container {
+                flex: 0 0 27% !important;
+                max-width: 27% !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                box-sizing: border-box !important;
+                display: flex !important;
+                justify-content: center !important;
+            }
+
+            .hero-right-image-container img {
+                width: 100% !important;
+                max-width: 85px !important;
+                height: auto !important;
+            }
+
+            .interactive-container {
+                grid-template-columns: 1fr !important;
+                gap: 20px !important;
+            }
+
+            #welcome-cover {
+                padding: 15px;
+            }
+
+            .cover-card {
+                padding: 30px 15px;
+                max-width: 100%;
+                width: 92%;
+            }
+
+            .cover-card h1 {
+                font-size: 1.9rem;
+            }
+
+            .cover-card h2 {
+                font-size: 1.2rem;
+            }
+
+            .cover-card p {
+                font-size: 0.75rem;
+                margin-bottom: 15px;
+            }
+
+            .open-btn {
+                padding: 10px 20px;
+                font-size: 0.75rem;
+            }
+
+            footer {
+                flex-direction: column !important;
+                gap: 10px !important;
+                text-align: center !important;
+            }
+        }
+    </style>
+</head>
+<body id="home">
+
+    <!-- WELCOME COVER PAGE -->
+    <div id="welcome-cover">
+        <div class="cover-card">
+            <h2>You're Invited ♥</h2>
+            <h1>Zel's 7th Birthday</h1>
+            <p>Seven years of love, laughter, and magic! <br>Join us for a sweet little celebration!</p>
+            <button class="open-btn" onclick="openInvitation()">Open Invitation</button>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#home" class="nav-brand">
+            <img src="Image/hero.jpg" alt="Logo"> Raizel Mae O. Benosa
+        </a>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#gallery-section">Gallery</a></li>
+            <li><a href="#messages">Messages</a></li>
+            <li><a href="javascript:void(0)" onclick="openJoinModal()">RSVP</a></li>
+            <li><a href="#gifts">Gifts</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <div class="hero-polaroid-wrapper">
+            <div class="side-handwriting">
+                Big dreams<br>
+                Small girl<br>
+                Seven years<br>
+                of magic ♥
+            </div>
+            <div class="polaroid-container hover-heart-img" onclick="openSingleLightbox('Image/hero.jpg')">
+                <div class="sparkle-1">✦</div>
+                <div class="hero-bow">
+                    <svg viewBox="0 0 100 100" width="100%" height="100%">
+                        <path d="M50 35 C35 15, 10 20, 15 40 C20 60, 45 50, 50 50 C55 50, 80 60, 85 40 C90 20, 65 15, 50 35 Z" fill="#E63956"/>
+                        <path d="M45 45 C35 60, 25 85, 30 90 C35 95, 45 75, 50 60 Z" fill="#C52843"/>
+                        <path d="M55 45 C65 60, 75 85, 70 90 C65 95, 55 75, 50 60 Z" fill="#C52843"/>
+                        <ellipse cx="50" cy="48" rx="8" ry="10" fill="#FF4D6D"/>
+                    </svg>
+                </div>
+                <div class="polaroid-img-wrapper">
+                    <img src="Image/hero.jpg" alt="Zel Hero Photo">
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-content">
+            <div class="special-invitation">A LITTLE BIRTHDAY MAGIC</div>
+            <h1>Zel is turning <span>SEVEN</span></h1>
+            <div class="hero-date">NOVEMBER 10, 2026 ♥</div>
+            <p class="hero-desc">Seven sweet years, countless happy memories, and one special day to celebrate!
+                <br><br> The party may be virtual, but the love is real. Come celebrate with Zel, wherever you are! ♥</p>
+            <button class="cta-btn" onclick="openJoinModal()">Join the Celebration</button>
+            <p class="sub-tagline">Seven looks sweeter with you around.</p>
+        </div>
+
+        <div class="hero-right-image-container hover-heart-img" onclick="openSingleLightbox('Image/Cake.png')">
+            <img src="Image/Cake.png" alt="Cake">
+        </div>
+    </header>
+
+    <!-- Countdown Section -->
+    <div class="countdown-section">
+        <div class="countdown-title">
+            <span>🎀</span> COUNTDOWN TO ZEL'S BIG DAY <span>✦</span>
+        </div>
+        <div class="countdown-timers">
+            <div class="time-box">
+                <div class="number" id="days">17</div>
+                <div class="label">Days</div>
+            </div>
+            <div class="time-box">
+                <div class="number" id="hours">10</div>
+                <div class="label">Hours</div>
+            </div>
+            <div class="time-box">
+                <div class="number" id="minutes">24</div>
+                <div class="label">Minutes</div>
+            </div>
+            <div class="time-box">
+                <div class="number" id="seconds">36</div>
+                <div class="label">Seconds</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Virtual Party Details -->
+    <section>
+        <div class="section-header">
+            <h2>VIRTUAL PARTY DETAILS</h2>
+        </div>
+        <div class="details-grid">
+            <div class="detail-card">
+                <div class="detail-icon-circle">📅</div>
+                <h3>WHEN</h3>
+                <p>November 10, 2026<br><br>A real birthday,<br>a virtual celebration!</p>
+            </div>
+            <div class="detail-card">
+                <div class="detail-icon-circle">👕</div>
+                <h3>OUTFIT</h3>
+                <p>Wear whatever makes you happy!<br><br>Pajamas, school uniform,<br>cosplay, or your favorite fit.</p>
+            </div>
+            <div class="detail-card">
+                <div class="detail-icon-circle">📍</div>
+                <h3>WHERE</h3>
+                <p>Wherever you are!<br><br>At Home, school, or work —<br>celebrate with us from anywhere.</p>
+            </div>
+            <div class="detail-card">
+                <div class="detail-icon-circle">🎁</div>
+                <h3>GIFTS</h3>
+                <p>Optional, never required.<br><br>Your love, sweet greetings,<br>and birthday wishes are the best gifts of all! ♥</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- INFINITE MARQUEE MOVING GALLERY -->
+    <div class="marquee-section" id="gallery-section">
+        <div class="section-header" style="margin-bottom: 20px;">
+            <h2 style="font-size: 1.8rem;">ZEL’S GALLERY</h2>
+            <p>Endless smiles and sweet adventures</p>
+        </div>
+        <div class="marquee-track" id="marqueeTrack"></div>
+    </div>
+
+    <!-- Interactive Section: Message & Gifts -->
+    <div class="interactive-container" id="rsvp-section">
+        <div class="card-box" id="messages">
+            <h3>Leave a Birthday Message</h3>
+            <div class="box-sub">A few kind words can make her day extra special.</div>
+            <form id="messageForm">
+                <div class="form-group">
+                    <label>Your Name</label>
+                    <input type="text" id="msgName" class="form-control" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label>Your Message</label>
+                    <textarea id="msgText" class="form-control" placeholder="Write your message here..." required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Birthday Message</button>
+            </form>
+        </div>
+
+        <!-- GIFT CORNER WITH GCASH, METROBANK, & PAYPAL TABS -->
+        <div class="card-box" id="gifts">
+            <h3>Optional Gift Corner</h3>
+            <div class="box-sub" style="margin-bottom: 20px;">
+                Pick your app, scan the code, or copy details to send a little birthday love.
+            </div>
+            
+            <!-- Gift Method Buttons -->
+            <div class="gift-tabs" style="display: flex; justify-content: center; gap: 10px; margin-bottom: 25px;">
+                <button onclick="switchGiftTab('gcash')" id="btn-gcash" class="tab-btn active-tab" style="padding: 10px 20px; border: 2px solid var(--primary-color); background: var(--primary-color); color: white; border-radius: 25px; cursor: pointer; font-size: 0.75rem; font-weight: 600; letter-spacing: 1px; transition: all 0.3s;">GCash</button>
+                <button onclick="switchGiftTab('metrobank')" id="btn-metrobank" class="tab-btn" style="padding: 10px 20px; border: 2px solid var(--primary-color); background: white; color: var(--primary-color); border-radius: 25px; cursor: pointer; font-size: 0.75rem; font-weight: 600; letter-spacing: 1px; transition: all 0.3s;">Metrobank</button>
+                <button onclick="switchGiftTab('paypal')" id="btn-paypal" class="tab-btn" style="padding: 10px 20px; border: 2px solid var(--primary-color); background: white; color: var(--primary-color); border-radius: 25px; cursor: pointer; font-size: 0.75rem; font-weight: 600; letter-spacing: 1px; transition: all 0.3s;">PayPal</button>
+            </div>
+
+            <!-- GCASH CONTENT -->
+            <div id="content-gcash" class="gift-content" style="text-align: center;">
+                <div class="qr-box hover-heart-img" onclick="openSingleLightbox('Image/QRGCASH.jpg')" style="display: inline-block; background: #fff; padding: 10px; border-radius: 12px; border: 1px solid var(--border-pink); margin-bottom: 15px;">
+                    <img src="Image/QRGCASH.jpg" alt="GCash QR Code" style="width: 130px; height: 130px; object-fit: contain;">
+                </div>
+                <div style="font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase; color: #8C5A66; margin-bottom: 4px;">Name You Will See</div>
+                <div style="font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; color: var(--primary-color); margin-bottom: 12px;">RI**A M** O.</div>
+                
+                <div style="font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase; color: #8C5A66; margin-bottom: 4px;">GCash Number</div>
+                <div id="gcashNumber" style="font-size: 1rem; font-weight: 600; color: var(--text-dark); margin-bottom: 15px;">0995-150-8062</div>
+                
+                <button class="copy-btn" onclick="copyText('09951508062', 'GCash number')" style="background: var(--primary-color); color: white; border: none; padding: 8px 20px; border-radius: 6px; font-size: 0.75rem; cursor: pointer; letter-spacing: 1px;">Copy GCash Number</button>
+            </div>
+
+            <!-- METROBANK CONTENT -->
+            <div id="content-metrobank" class="gift-content" style="text-align: center; display: none;">
+                <div style="font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase; color: #8C5A66; margin-bottom: 4px;">Account Name</div>
+                <div style="font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; color: var(--primary-color); margin-bottom: 12px;">Raizel Mae O. Benosa</div>
+                
+                <div style="font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase; color: #8C5A66; margin-bottom: 4px;">Account Number</div>
+                <div id="metrobankNumber" style="font-size: 1rem; font-weight: 600; color: var(--text-dark); margin-bottom: 15px;">437-3-43759653-1</div>
+                
+                <button class="copy-btn" onclick="copyText('4373437596531', 'Metrobank account number')" style="background: var(--primary-color); color: white; border: none; padding: 8px 20px; border-radius: 6px; font-size: 0.75rem; cursor: pointer; letter-spacing: 1px;">Copy Account Number</button>
+            </div>
+
+            <!-- PAYPAL CONTENT -->
+            <div id="content-paypal" class="gift-content" style="text-align: center; display: none;">
+                <div style="padding: 25px 0;">
+                    <div class="qr-box hover-heart-img" onclick="openSingleLightbox('Image/paypal_qr.png')" style="display: inline-block; background: #fff; padding: 10px; border-radius: 12px; border: 1px solid var(--border-pink); margin-bottom: 15px;">
+                        <img src="Image/paypal_qr.png" alt="PayPal QR Code" style="width: 130px; height: 130px; object-fit: contain;">
+                    </div>
+                    <div style="font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase; color: #8C5A66; margin-bottom: 4px;">PayPal Account / Email</div>
+                    <div id="paypalEmail" style="font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 600; color: var(--primary-color); margin-bottom: 15px;">rizzamayorcajada.va@gmail.com</div>
+                    
+                    <button class="copy-btn" onclick="copyText('rizzamayorcajada.va@gmail.com', 'PayPal email')" style="background: var(--primary-color); color: white; border: none; padding: 8px 20px; border-radius: 6px; font-size: 0.75rem; cursor: pointer; letter-spacing: 1px;">Copy PayPal Email</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JOIN CELEBRATION MODAL -->
+    <div id="joinModal" class="custom-modal">
+        <div class="modal-card">
+            <span class="modal-close" onclick="closeJoinModal()">&times;</span>
+            <h3>Join Virtual Celebration</h3>
+            <p class="box-sub" style="margin-bottom:15px;">Please confirm your attendance</p>
+            <form id="joinForm">
+                <div class="form-group">
+                    <label>Your Full Name</label>
+                    <input type="text" id="joinNameInput" class="form-control" placeholder="Enter your name" required>
+                </div>
+                <div class="terms-box">
+                    <strong>Terms & Conditions:</strong><br>
+                    By joining virtually, you agree to participate peacefully. The celebrant, parents, and organizers are <strong>NOT liable or responsible</strong> for any incidents, device issues, actions, or anything you do during or as a result of this virtual celebration. Join at your own discretion.
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="termsCheck" required>
+                    <label for="termsCheck" style="display:inline; font-size:0.75rem; color:#5A2A38;">I agree to the Terms & Conditions and acknowledge that the celebrant is not liable for anything.</label>
+                </div>
+                <button type="submit" class="submit-btn">Confirm & Join</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ADMIN LOGIN MODAL -->
+    <div id="adminLoginModal" class="custom-modal">
+        <div class="modal-card">
+            <span class="modal-close" onclick="closeAdminLogin()">&times;</span>
+            <h3>Admin Portal Login</h3>
+            <p class="box-sub" style="margin-bottom:15px;">Enter credentials to view submissions</p>
+            <form id="adminLoginForm">
+                <div class="form-group">
+                    <label>Username</label>
+                    <input type="text" id="adminUser" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" id="adminPass" class="form-control" required>
+                </div>
+                <button type="submit" class="submit-btn">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ADMIN DASHBOARD MODAL -->
+    <div id="adminDashboardModal" class="custom-modal">
+        <div class="modal-card" style="max-width: 700px;">
+            <span class="modal-close" onclick="closeAdminDashboard()">&times;</span>
+            <h3>Admin Dashboard</h3>
+            <p class="box-sub" style="margin-bottom:15px;">List of Virtual Attendees and Birthday Messages</p>
+            
+            <h4 style="color:var(--primary-color); font-family:'Cormorant Garamond'; margin-top:10px;">Virtual Attendees (Join List):</h4>
+            <div style="max-height: 150px; overflow-y: auto; margin-bottom: 20px;">
+                <table class="admin-table">
+                    <thead>
+                        <tr><th>Name</th><th>Date/Time</th></tr>
+                    </thead>
+                    <tbody id="attendeesTableBody"></tbody>
+                </table>
+            </div>
+
+            <h4 style="color:var(--primary-color); font-family:'Cormorant Garamond'; margin-top:10px;">Birthday Messages:</h4>
+            <div style="max-height: 180px; overflow-y: auto;">
+                <table class="admin-table">
+                    <thead>
+                        <tr><th>Name</th><th>Message</th></tr>
+                    </thead>
+                    <tbody id="messagesTableBody"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div id="lightboxModal" class="lightbox-modal">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <button class="lightbox-nav lightbox-prev" onclick="changeSlide(-1)">&#10094;</button>
+        <img class="lightbox-content" id="lightboxImage" src="" alt="Enlarged View">
+        <button class="lightbox-nav lightbox-next" onclick="changeSlide(1)">&#10095;</button>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div onclick="triggerAdminSecret()" style="flex: 1; text-align: left;">© 2026 Zel's Birthday. All rights reserved.</div>
+        <div>🎀 Zel's 7th Birthday</div>
+        <div style="flex: 1; text-align: right; font-family: 'Great Vibes', cursive; font-size: 1.2rem;">Same girl. Bigger dreams. ♥</div>
+    </footer>
+
+    <!-- Embedded JavaScript -->
+    <script>
+        // OPEN INVITATION COVER FUNCTION
+        function openInvitation() {
+            const cover = document.getElementById("welcome-cover");
+            if (cover) {
+                cover.style.opacity = "0";
+                cover.style.visibility = "hidden";
+            }
+        }
+
+        // MAGICAL FLOATING SPARKLES GENERATOR
+        function createMagicSparkles() {
+            const sparkleChars = ['✦', '✨', '⭐', '♥', '🌸'];
+            const container = document.body;
+            for (let i = 0; i < 45; i++) {
+                const sparkle = document.createElement('div');
+                sparkle.className = 'magic-sparkle';
+                sparkle.innerText = sparkleChars[Math.floor(Math.random() * sparkleChars.length)];
+                sparkle.style.left = Math.random() * 100 + 'vw';
+                sparkle.style.top = (Math.random() * document.body.scrollHeight) + 'px';
+                sparkle.style.fontSize = (Math.random() * 1 + 0.6) + 'rem';
+                sparkle.style.animationDuration = (Math.random() * 4 + 2) + 's';
+                sparkle.style.animationDelay = (Math.random() * 3) + 's';
+                container.appendChild(sparkle);
+            }
+        }
+        window.addEventListener('DOMContentLoaded', createMagicSparkles);
+
+        // COUNTDOWN TIMER
+        const birthdayDate = new Date("November 10, 2026 00:00:00").getTime();
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = birthdayDate - now;
+            if (distance > 0) {
+                const daysEl = document.getElementById("days");
+                const hoursEl = document.getElementById("hours");
+                const minutesEl = document.getElementById("minutes");
+                const secondsEl = document.getElementById("seconds");
+                
+                if (daysEl) daysEl.innerText = Math.floor(distance / (1000 * 60 * 60 * 24));
+                if (hoursEl) hoursEl.innerText = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                if (minutesEl) minutesEl.innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                if (secondsEl) secondsEl.innerText = Math.floor((distance % (1000 * 60)) / 1000);
+            }
+        }
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // MARQUEE GALLERY PICTURES
+        const marqueeImages = [
+            "Image/1.jpg", "Image/2.jpg", "Image/3.jpg", "Image/4.jpg", "Image/5.jpg",
+            "Image/6.jpg", "Image/7.jpg", "Image/8.jpg", "Image/9.jpg", "Image/10.jpg"
+        ];
+
+        const track = document.getElementById("marqueeTrack");
+        if (track) {
+            const infiniteList = [...marqueeImages, ...marqueeImages]; 
+            track.innerHTML = infiniteList.map((src, idx) => `
+                <div class="marquee-item" onclick="openGalleryLightbox(${idx % marqueeImages.length})">
+                    <img src="${src}" alt="Zel Memory">
+                </div>
+            `).join('');
+        }
+
+        let activeImagesList = [];
+        let currentIndex = 0;
+
+        function openGalleryLightbox(index) {
+            activeImagesList = marqueeImages;
+            currentIndex = index;
+            document.getElementById("lightboxImage").src = activeImagesList[currentIndex];
+            document.getElementById("lightboxModal").style.display = "flex";
+            document.querySelectorAll(".lightbox-nav").forEach(el => el.style.display = "block");
+        }
+
+        function openSingleLightbox(imageSrc) {
+            activeImagesList = [imageSrc];
+            currentIndex = 0;
+            document.getElementById("lightboxImage").src = imageSrc;
+            document.getElementById("lightboxModal").style.display = "flex";
+            document.querySelectorAll(".lightbox-nav").forEach(el => el.style.display = "none");
+        }
+
+        function closeLightbox() {
+            document.getElementById("lightboxModal").style.display = "none";
+        }
+
+        function changeSlide(direction) {
+            if (activeImagesList.length <= 1) return;
+            currentIndex += direction;
+            if (currentIndex < 0) currentIndex = activeImagesList.length - 1;
+            if (currentIndex >= activeImagesList.length) currentIndex = 0;
+            document.getElementById("lightboxImage").src = activeImagesList[currentIndex];
+        }
+
+        // Gift Tabs Switching Function (GCash, Metrobank, PayPal)
+        function switchGiftTab(type) {
+            const gcashContent = document.getElementById('content-gcash');
+            const metrobankContent = document.getElementById('content-metrobank');
+            const paypalContent = document.getElementById('content-paypal');
+            
+            if (gcashContent) gcashContent.style.display = 'none';
+            if (metrobankContent) metrobankContent.style.display = 'none';
+            if (paypalContent) paypalContent.style.display = 'none';
+
+            const btnGcash = document.getElementById('btn-gcash');
+            const btnMetrobank = document.getElementById('btn-metrobank');
+            const btnPaypal = document.getElementById('btn-paypal');
+
+            if (btnGcash) { btnGcash.style.background = 'white'; btnGcash.style.color = 'var(--primary-color)'; }
+            if (btnMetrobank) { btnMetrobank.style.background = 'white'; btnMetrobank.style.color = 'var(--primary-color)'; }
+            if (btnPaypal) { btnPaypal.style.background = 'white'; btnPaypal.style.color = 'var(--primary-color)'; }
+
+            const targetContent = document.getElementById('content-' + type);
+            const targetBtn = document.getElementById('btn-' + type);
+
+            if (targetContent) targetContent.style.display = 'block';
+            if (targetBtn) { targetBtn.style.background = 'var(--primary-color)'; targetBtn.style.color = 'white'; }
+        }
+
+        function copyText(text, label) {
+            navigator.clipboard.writeText(text);
+            alert(label + " copied: " + text);
+        }
+
+        function openJoinModal() { document.getElementById("joinModal").style.display = "flex"; }
+        function closeJoinModal() { document.getElementById("joinModal").style.display = "none"; }
+        function closeAdminLogin() { document.getElementById("adminLoginModal").style.display = "none"; }
+        function closeAdminDashboard() { document.getElementById("adminDashboardModal").style.display = "none"; }
+
+        const joinForm = document.getElementById("joinForm");
+        if (joinForm) {
+            joinForm.addEventListener("submit", function(e) {
+                e.preventDefault();
+                const name = document.getElementById("joinNameInput").value;
+                let attendees = JSON.parse(localStorage.getItem("zel_attendees") || "[]");
+                attendees.push({ name: name, date: new Date().toLocaleString() });
+                localStorage.setItem("zel_attendees", JSON.stringify(attendees));
+                alert("Thank you for confirming, " + name + "! See you at the virtual party.");
+                closeJoinModal();
+                this.reset();
+            });
+        }
+
+        // UPDATED FORM HANDLER WITH GOOGLE SHEET INTEGRATION + LOCALSTORAGE BACKUP
+        const messageForm = document.getElementById("messageForm");
+        if (messageForm) {
+            messageForm.addEventListener("submit", function(e) {
+                e.preventDefault();
+                
+                const name = document.getElementById("msgName").value;
+                const text = document.getElementById("msgText").value;
+                const submitBtn = this.querySelector('button[type="submit"]');
+
+                let messages = JSON.parse(localStorage.getItem("zel_messages") || "[]");
+                messages.push({ name: name, message: text });
+                localStorage.setItem("zel_messages", JSON.stringify(messages));
+
+                const originalBtnText = submitBtn.innerText;
+                submitBtn.innerText = "Sending...";
+                submitBtn.disabled = true;
+
+                const googleSheetUrl = "https://script.google.com/macros/s/AKfycbzp6AsFLiSF1xAldRix_R-qpnQyyNpoA2GqvDqYVQ4B1YB3X_T4KtjXvWg_UUN_wJcw/exec";
+
+                fetch(googleSheetUrl, {
+                    method: "POST",
+                    mode: "no-cors",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        name: name,
+                        message: text
+                    })
+                })
+                .then(() => {
+                    alert("Thank you for your lovely message, " + name + "!");
+                    messageForm.reset();
+                })
+                .catch(error => {
+                    console.error("Error sending to sheet:", error);
+                    alert("Thank you for your lovely message, " + name + "!");
+                    messageForm.reset();
+                })
+                .finally(() => {
+                    submitBtn.innerText = originalBtnText;
+                    submitBtn.disabled = false;
+                });
+            });
+        }
+
+        let clickCount = 0;
+        function triggerAdminSecret() {
+            clickCount++;
+            if (clickCount === 3) {
+                clickCount = 0;
+                document.getElementById("adminLoginModal").style.display = "flex";
+            }
+            setTimeout(() => { clickCount = 0; }, 1000);
+        }
+
+        const adminLoginForm = document.getElementById("adminLoginForm");
+        if (adminLoginForm) {
+            adminLoginForm.addEventListener("submit", function(e) {
+                e.preventDefault();
+                const user = document.getElementById("adminUser").value;
+                const pass = document.getElementById("adminPass").value;
+                if (user === "admin" && pass === "zel2026") {
+                    closeAdminLogin();
+                    loadAdminData();
+                    document.getElementById("adminDashboardModal").style.display = "flex";
+                    this.reset();
+                } else {
+                    alert("Invalid username or password.");
+                }
+            });
+        }
+
+        function loadAdminData() {
+            const attendees = JSON.parse(localStorage.getItem("zel_attendees") || "[]");
+            const messages = JSON.parse(localStorage.getItem("zel_messages") || "[]");
+            
+            let attHtml = "";
+            attendees.forEach(a => { attHtml += `<tr><td>${a.name}</td><td>${a.date}</td></tr>`; });
+            const attBody = document.getElementById("attendeesTableBody");
+            if (attBody) attBody.innerHTML = attHtml || "<tr><td colspan='2'>No attendees yet.</td></tr>";
+
+            let msgHtml = "";
+            messages.forEach(m => { msgHtml += `<tr><td>${m.name}</td><td>${m.message}</td></tr>`; });
+            const msgBody = document.getElementById("messagesTableBody");
+            if (msgBody) msgBody.innerHTML = msgHtml || "<tr><td colspan='2'>No messages yet.</td></tr>";
+        }
+    </script>
+</body>
+</html>
