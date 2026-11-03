@@ -49,69 +49,70 @@
         }
 
         /* WELCOME COVER PAGE */
-        #welcome-cover {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background-color: #FDF5F6;
-            background-image: url('Image/hero.jpg');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-            transition: opacity 0.8s ease, visibility 0.8s ease;
-        }
+        /* WELCOME COVER PAGE NA MAY BACKGROUND IMAGE */
+#welcome-cover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #FDF5F6;
+    background-image: url('Image/hero.jpg'); /* Palitan o panatilihin ang background image mo rito */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.8s ease, visibility 0.8s ease;
+}
 
-        /* HEARTBEAT ANIMATION PARA SA CARD */
-        @keyframes heartbeat {
-            0% { transform: scale(1); }
-            14% { transform: scale(1.04); }
-            28% { transform: scale(1); }
-            42% { transform: scale(1.04); }
-            70% { transform: scale(1); }
-        }
+/* HEARTBEAT ANIMATION PARA SA CARD */
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    14% { transform: scale(1.04); }
+    28% { transform: scale(1); }
+    42% { transform: scale(1.04); }
+    70% { transform: scale(1); }
+}
 
-        .cover-card {
-            background: rgba(255, 255, 255, 0.95);
-            border: 2px solid var(--border-pink);
-            border-radius: 20px;
-            padding: 50px 30px;
-            text-align: center;
-            max-width: 450px;
-            width: 90%;
-            box-shadow: 0 15px 35px rgba(132, 51, 76, 0.15);
-            position: relative;
-            animation: heartbeat 2.5s infinite ease-in-out;
-        }
+/* ORIGINAL CLEAN CARD DESIGN NA MAY HEARTBEAT */
+.cover-card {
+    background: rgba(255, 255, 255, 0.95);
+    border: 2px solid var(--border-pink);
+    border-radius: 20px;
+    padding: 50px 30px;
+    text-align: center;
+    max-width: 450px;
+    width: 90%;
+    box-shadow: 0 15px 35px rgba(132, 51, 76, 0.15);
+    position: relative;
+    animation: heartbeat 2.5s infinite ease-in-out;
+}
 
-        .cover-card h2 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 2rem;
-            color: var(--primary-color);
-            letter-spacing: 3px;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-        }
+.cover-card h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    color: var(--primary-color);
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
 
-        .cover-card h1 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 3rem;
-            color: var(--primary-color);
-            margin-bottom: 20px;
-            line-height: 1.1;
-        }
+.cover-card h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
 
-        .cover-card p {
-            font-size: 0.9rem;
-            color: #7A4C58;
-            margin-bottom: 30px;
-            line-height: 1.6;
-        }
-
+.cover-card p {
+    font-size: 0.9rem;
+    color: #7A4C58;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
         .open-btn {
             background-color: var(--primary-color);
             color: white;
@@ -657,6 +658,49 @@
             cursor: pointer;
         }
 
+        .terms-box {
+            font-size: 0.75rem;
+            color: #7A4C58;
+            background: var(--light-pink);
+            padding: 10px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            max-height: 100px;
+            overflow-y: auto;
+            line-height: 1.4;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 0.8rem;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+        }
+
+        .checkbox-group input {
+            margin-top: 3px;
+        }
+
+        .admin-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            font-size: 0.8rem;
+        }
+
+        .admin-table th, .admin-table td {
+            border: 1px solid var(--border-pink);
+            padding: 8px;
+            text-align: left;
+        }
+
+        .admin-table th {
+            background-color: var(--light-pink);
+            color: var(--primary-color);
+        }
+
         /* Lightbox Modal */
         .lightbox-modal {
             display: none;
@@ -690,138 +734,208 @@
             cursor: pointer;
         }
 
-        /* MOBILE RESPONSIVE - PERFECT CENTER FIX */
-        @media (max-width: 768px) {
-            html, body {
-                width: 100% !important;
-                overflow-x: hidden !important;
-                margin: 0 !important;
-                padding: 0 !important;
-            }
-
-            nav {
-                flex-direction: column !important;
-                padding: 10px 5px !important;
-                gap: 6px !important;
-                align-items: center !important;
-            }
-
-            .nav-links {
-                display: flex !important;
-                gap: 8px !important;
-                font-size: 0.65rem !important;
-                flex-wrap: wrap !important;
-                justify-content: center !important;
-            }
-
-            .hero-section {
-                display: flex !important;
-                flex-direction: row !important;
-                justify-content: space-between !important;
-                align-items: center !important;
-                width: 100% !important;
-                max-width: 100% !important;
-                box-sizing: border-box !important;
-                padding: 10px 2px !important;
-                margin: 0 auto !important;
-                gap: 2px !important;
-                flex-wrap: nowrap !important;
-            }
-
-            .hero-polaroid-wrapper {
-                flex: 0 0 27% !important;
-                max-width: 27% !important;
-                margin: 0 !important;
-                padding: 0 !important;
-            }
-
-            .polaroid-container {
-                width: 100% !important;
-                max-width: 90px !important;
-                margin: 0 auto !important;
-                padding: 2px !important;
-                box-sizing: border-box !important;
-            }
-
-            .polaroid-img-wrapper {
-                height: 90px !important;
-            }
-
-            .side-handwriting {
-                display: none !important;
-            }
-
-            .hero-content {
-                flex: 0 0 44% !important;
-                max-width: 44% !important;
-                padding: 0 2px !important;
-                margin: 0 !important;
-                text-align: center !important;
-                box-sizing: border-box !important;
-            }
-
-            .hero-content h1 {
-                font-size: 0.75rem !important;
-                line-height: 1.1 !important;
-            }
-
-            .hero-content h1 span {
-                font-size: 0.95rem !important;
-            }
-
-            .hero-content p {
-                font-size: 0.42rem !important;
-                line-height: 1.1 !important;
-                margin-bottom: 3px !important;
-            }
-
-            .cta-btn {
-                padding: 3px 6px !important;
-                font-size: 0.42rem !important;
-            }
-
-            .hero-right-image-container {
-                flex: 0 0 27% !important;
-                max-width: 27% !important;
-                margin: 0 !important;
-                padding: 0 !important;
-                box-sizing: border-box !important;
-            }
-
-            .hero-right-image-container img {
-                width: 100% !important;
-                max-width: 85px !important;
-                height: auto !important;
-            }
-
-            #welcome-cover {
-                padding: 15px;
-            }
-
-            .cover-card {
-                padding: 30px 15px;
-                max-width: 100%;
-                width: 92%;
-            }
-
-            .cover-card h1 {
-                font-size: 1.9rem;
-            }
-
-            .cover-card h2 {
-                font-size: 1.2rem;
-            }
-
-            .cover-card p {
-                font-size: 0.75rem;
-                margin-bottom: 15px;
-            }
-
-            .open-btn {
-                padding: 10px 20px;
-                font-size: 0.75rem;
-            }
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: none;
+            font-size: 30px;
+            padding: 10px 18px;
+            cursor: pointer;
+            border-radius: 50%;
         }
+        .lightbox-prev { left: 30px; }
+        .lightbox-next { right: 30px; }
+
+        .hover-heart-img {
+            position: relative;
+        }
+
+        /* FINAL CLEAN MOBILE RESPONSIVE ADJUSTMENTS */
+@media (max-width: 768px) {
+    /* Prevent horizontal scrolling */
+    body, html {
+        overflow-x: hidden;
+    }
+
+    /* 1. Navigation Bar */
+    nav {
+        flex-direction: column !important;
+        padding: 10px 5px !important;
+        gap: 6px !important;
+        align-items: center !important;
+    }
+
+    .nav-links {
+        display: flex !important;
+        gap: 10px !important;
+        font-size: 0.7rem !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+    }
+
+    /* 2. Hero Section (Side-by-side fit for mobile) */
+    .hero-section {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+        padding: 10px 4px !important;
+        box-sizing: border-box !important;
+        gap: 4px !important;
+    }
+
+    /* Left: Polaroid */
+    .hero-polaroid-wrapper {
+        flex: 0 0 28% !important;
+        max-width: 28% !important;
+        margin: 0 !important;
+    }
+
+    .polaroid-container {
+        width: 100% !important;
+        padding: 4px !important;
+    }
+
+    .polaroid-img-wrapper {
+        height: 110px !important;
+    }
+
+    .side-handwriting {
+        display: none !important;
+    }
+
+    /* Middle: Text Content */
+    .hero-content {
+        flex: 0 0 44% !important;
+        max-width: 44% !important;
+        padding: 0 2px !important;
+        text-align: center !important;
+    }
+
+    .hero-content h1 {
+        font-size: 0.95rem !important;
+        line-height: 1.1 !important;
+    }
+
+    .hero-content h1 span {
+        font-size: 1.2rem !important;
+    }
+
+    .hero-content p {
+        font-size: 0.5rem !important;
+        line-height: 1.2 !important;
+        margin-bottom: 5px !important;
+    }
+
+    .join-btn, .open-btn, .hero-content .btn {
+        padding: 5px 10px !important;
+        font-size: 0.55rem !important;
+    }
+
+    /* Right: Cake Image */
+    .hero-right-container, 
+    .hero-section .right-image {
+        flex: 0 0 25% !important;
+        max-width: 25% !important;
+        width: 100% !important;
+    }
+
+    /* Other sections below */
+    .countdown-container {
+        width: 95% !important;
+        margin: 15px auto !important;
+        padding: 10px !important;
+    }
+
+    footer {
+        flex-direction: column !important;
+        gap: 15px !important;
+        text-align: center !important;
+    }
+}
+    /* 2. WELCOME COVER MOBILE FIX */
+    #welcome-cover {
+        padding: 15px;
+    }
+
+    .cover-card {
+        padding: 35px 20px;
+        max-width: 100%;
+        width: 92%;
+    }
+
+    .cover-card h1 {
+        font-size: 2.3rem;
+    }
+
+    .cover-card h2 {
+        font-size: 1.5rem;
+    }
+
+    .cover-card p {
+        font-size: 0.85rem;
+        margin-bottom: 20px;
+    }
+
+    .open-btn {
+        padding: 12px 25px;
+        font-size: 0.8rem;
+    }
+
+    /* 3. HERO SECTION (SIDE-BY-SIDE MINIATURE LAYOUT) */
+    .hero-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        padding: 15px 5px;
+        flex-wrap: nowrap;
+    }
+
+    .polaroid-container {
+        width: 140px;
+        min-width: 140px;
+    }
+
+    .polaroid-img-wrapper {
+        height: 180px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.3rem;
+    }
+
+    .hero-content h1 span {
+        font-size: 1.7rem;
+    }
+
+    .hero-content p {
+        font-size: 0.65rem;
+        line-height: 1.3;
+    }
+
+    .hero-section img, 
+    .hero-section .right-image, 
+    .hero-right-container {
+        max-width: 120px;
+        width: 120px;
+    }
+
+    .side-handwriting {
+        font-size: 0.75rem;
+        width: 80px;
+    }
+}
+
+
+
+
     </style>
 </head>
 <body id="home">
@@ -971,13 +1085,384 @@
             </form>
         </div>
 
+        <!-- GIFT CORNER WITH GCASH, METROBANK, & PAYPAL TABS -->
         <div class="card-box" id="gifts">
             <h3>Optional Gift Corner</h3>
             <div class="box-sub" style="margin-bottom: 20px;">
                 Pick your app, scan the code, or copy details to send a little birthday love.
             </div>
+            
+            <!-- Gift Method Buttons -->
+            <div class="gift-tabs" style="display: flex; justify-content: center; gap: 10px; margin-bottom: 25px;">
+                <button onclick="switchGiftTab('gcash')" id="btn-gcash" class="tab-btn active-tab" style="padding: 10px 20px; border: 2px solid var(--primary-color); background: var(--primary-color); color: white; border-radius: 25px; cursor: pointer; font-size: 0.75rem; font-weight: 600; letter-spacing: 1px; transition: all 0.3s;">GCash</button>
+                <button onclick="switchGiftTab('metrobank')" id="btn-metrobank" class="tab-btn" style="padding: 10px 20px; border: 2px solid var(--primary-color); background: white; color: var(--primary-color); border-radius: 25px; cursor: pointer; font-size: 0.75rem; font-weight: 600; letter-spacing: 1px; transition: all 0.3s;">Metrobank</button>
+                <button onclick="switchGiftTab('paypal')" id="btn-paypal" class="tab-btn" style="padding: 10px 20px; border: 2px solid var(--primary-color); background: white; color: var(--primary-color); border-radius: 25px; cursor: pointer; font-size: 0.75rem; font-weight: 600; letter-spacing: 1px; transition: all 0.3s;">PayPal</button>
+            </div>
+
+            <!-- GCASH CONTENT -->
+            <div id="content-gcash" class="gift-content" style="text-align: center;">
+                <div class="qr-box hover-heart-img" onclick="openSingleLightbox('Image/QRGCASH.jpg')" style="display: inline-block; background: #fff; padding: 10px; border-radius: 12px; border: 1px solid var(--border-pink); margin-bottom: 15px;">
+                    <img src="Image/QRGCASH.jpg" alt="GCash QR Code" style="width: 130px; height: 130px; object-fit: contain;">
+                </div>
+                <div style="font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase; color: #8C5A66; margin-bottom: 4px;">Name You Will See</div>
+                <div style="font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; color: var(--primary-color); margin-bottom: 12px;">RI**A M** O.</div>
+                
+                <div style="font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase; color: #8C5A66; margin-bottom: 4px;">GCash Number</div>
+                <div id="gcashNumber" style="font-size: 1rem; font-weight: 600; color: var(--text-dark); margin-bottom: 15px;">0995-150-8062</div>
+                
+                <button class="copy-btn" onclick="copyText('09951508062', 'GCash number')" style="background: var(--primary-color); color: white; border: none; padding: 8px 20px; border-radius: 6px; font-size: 0.75rem; cursor: pointer; letter-spacing: 1px;">Copy GCash Number</button>
+            </div>
+
+            <!-- METROBANK CONTENT -->
+            <div id="content-metrobank" class="gift-content" style="text-align: center; display: none;">
+               
+                <div style="font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase; color: #8C5A66; margin-bottom: 4px;">Account Name</div>
+                <div style="font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; color: var(--primary-color); margin-bottom: 12px;">Raizel Mae O. Benosa</div>
+                
+                <div style="font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase; color: #8C5A66; margin-bottom: 4px;">Account Number</div>
+                <div id="metrobankNumber" style="font-size: 1rem; font-weight: 600; color: var(--text-dark); margin-bottom: 15px;">437-3-43759653-1 </div>
+                
+                <button class="copy-btn" onclick="copyText('123456789012', 'Metrobank account number')" style="background: var(--primary-color); color: white; border: none; padding: 8px 20px; border-radius: 6px; font-size: 0.75rem; cursor: pointer; letter-spacing: 1px;">Copy Account Number</button>
+            </div>
+
+            <!-- PAYPAL CONTENT -->
+            <div id="content-paypal" class="gift-content" style="text-align: center; display: none;">
+                <div style="padding: 25px 0;">
+                     <div class="qr-box hover-heart-img" onclick="openSingleLightbox('Image/paypal_qr.png')" style="display: inline-block; background: #fff; padding: 10px; border-radius: 12px; border: 1px solid var(--border-pink); margin-bottom: 15px;">
+                    <img src="Image/paypal_qr.png" alt="Metrobank QR Code" style="width: 130px; height: 130px; object-fit: contain;">
+                </div>
+                    <div style="font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase; color: #8C5A66; margin-bottom: 4px;">PayPal Account / Email</div>
+                    <div id="paypalEmail" style="font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 600; color: var(--primary-color); margin-bottom: 15px;">rizzamayorcajada.va@gmail.com</div>
+                    
+                    <button class="copy-btn" onclick="copyText('rizzamay@email.com', 'PayPal email')" style="background: var(--primary-color); color: white; border: none; padding: 8px 20px; border-radius: 6px; font-size: 0.75rem; cursor: pointer; letter-spacing: 1px;">Copy PayPal Email</button>
+                </div>
+            </div>
         </div>
     </div>
 
+    <!-- JOIN CELEBRATION MODAL -->
+    <div id="joinModal" class="custom-modal">
+        <div class="modal-card">
+            <span class="modal-close" onclick="closeJoinModal()">&times;</span>
+            <h3>Join Virtual Celebration</h3>
+            <p class="box-sub" style="margin-bottom:15px;">Please confirm your attendance</p>
+            <form id="joinForm">
+                <div class="form-group">
+                    <label>Your Full Name</label>
+                    <input type="text" id="joinNameInput" class="form-control" placeholder="Enter your name" required>
+                </div>
+                <div class="terms-box">
+                    <strong>Terms & Conditions:</strong><br>
+                    By joining virtually, you agree to participate peacefully. The celebrant, parents, and organizers are <strong>NOT liable or responsible</strong> for any incidents, device issues, actions, or anything you do during or as a result of this virtual celebration. Join at your own discretion.
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="termsCheck" required>
+                    <label for="termsCheck" style="display:inline; font-size:0.75rem; color:#5A2A38;">I agree to the Terms & Conditions and acknowledge that the celebrant is not liable for anything.</label>
+                </div>
+                <button type="submit" class="submit-btn">Confirm & Join</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ADMIN LOGIN MODAL -->
+    <div id="adminLoginModal" class="custom-modal">
+        <div class="modal-card">
+            <span class="modal-close" onclick="closeAdminLogin()">&times;</span>
+            <h3>Admin Portal Login</h3>
+            <p class="box-sub" style="margin-bottom:15px;">Enter credentials to view submissions</p>
+            <form id="adminLoginForm">
+                <div class="form-group">
+                    <label>Username</label>
+                    <input type="text" id="adminUser" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" id="adminPass" class="form-control" required>
+                </div>
+                <button type="submit" class="submit-btn">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ADMIN DASHBOARD MODAL -->
+    <div id="adminDashboardModal" class="custom-modal">
+        <div class="modal-card" style="max-width: 700px;">
+            <span class="modal-close" onclick="closeAdminDashboard()">&times;</span>
+            <h3>Admin Dashboard</h3>
+            <p class="box-sub" style="margin-bottom:15px;">List of Virtual Attendees and Birthday Messages</p>
+            
+            <h4 style="color:var(--primary-color); font-family:'Cormorant Garamond'; margin-top:10px;">Virtual Attendees (Join List):</h4>
+            <div style="max-height: 150px; overflow-y: auto; margin-bottom: 20px;">
+                <table class="admin-table">
+                    <thead>
+                        <tr><th>Name</th><th>Date/Time</th></tr>
+                    </thead>
+                    <tbody id="attendeesTableBody"></tbody>
+                </table>
+            </div>
+
+            <h4 style="color:var(--primary-color); font-family:'Cormorant Garamond'; margin-top:10px;">Birthday Messages:</h4>
+            <div style="max-height: 180px; overflow-y: auto;">
+                <table class="admin-table">
+                    <thead>
+                        <tr><th>Name</th><th>Message</th></tr>
+                    </thead>
+                    <tbody id="messagesTableBody"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div id="lightboxModal" class="lightbox-modal">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <button class="lightbox-nav lightbox-prev" onclick="changeSlide(-1)">&#10094;</button>
+        <img class="lightbox-content" id="lightboxImage" src="" alt="Enlarged View">
+        <button class="lightbox-nav lightbox-next" onclick="changeSlide(1)">&#10095;</button>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div onclick="triggerAdminSecret()" style="flex: 1; text-align: left;">© 2026 Zel's Birthday. All rights reserved.</div>
+        <div>🎀 Zel's 7th Birthday</div>
+        <div style="flex: 1; text-align: right; font-family: 'Great Vibes', cursive; font-size: 1.2rem;">Same girl. Bigger dreams. ♥</div>
+    </footer>
+
+    <!-- Embedded JavaScript -->
+    <script>
+        // OPEN INVITATION COVER FUNCTION
+        function openInvitation() {
+            const cover = document.getElementById("welcome-cover");
+            if (cover) {
+                cover.style.opacity = "0";
+                cover.style.visibility = "hidden";
+            }
+        }
+
+        // MAGICAL FLOATING SPARKLES GENERATOR
+        function createMagicSparkles() {
+            const sparkleChars = ['✦', '✨', '⭐', '♥', '🌸'];
+            const container = document.body;
+            for (let i = 0; i < 45; i++) {
+                const sparkle = document.createElement('div');
+                sparkle.className = 'magic-sparkle';
+                sparkle.innerText = sparkleChars[Math.floor(Math.random() * sparkleChars.length)];
+                sparkle.style.left = Math.random() * 100 + 'vw';
+                sparkle.style.top = (Math.random() * document.body.scrollHeight) + 'px';
+                sparkle.style.fontSize = (Math.random() * 1 + 0.6) + 'rem';
+                sparkle.style.animationDuration = (Math.random() * 4 + 2) + 's';
+                sparkle.style.animationDelay = (Math.random() * 3) + 's';
+                container.appendChild(sparkle);
+            }
+        }
+        window.addEventListener('DOMContentLoaded', createMagicSparkles);
+
+        // COUNTDOWN TIMER
+        const birthdayDate = new Date("November 10, 2026 00:00:00").getTime();
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = birthdayDate - now;
+            if (distance > 0) {
+                const daysEl = document.getElementById("days");
+                const hoursEl = document.getElementById("hours");
+                const minutesEl = document.getElementById("minutes");
+                const secondsEl = document.getElementById("seconds");
+                
+                if (daysEl) daysEl.innerText = Math.floor(distance / (1000 * 60 * 60 * 24));
+                if (hoursEl) hoursEl.innerText = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                if (minutesEl) minutesEl.innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                if (secondsEl) secondsEl.innerText = Math.floor((distance % (1000 * 60)) / 1000);
+            }
+        }
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // MARQUEE GALLERY PICTURES
+        const marqueeImages = [
+            "Image/1.jpg", "Image/2.jpg", "Image/3.jpg", "Image/4.jpg", "Image/5.jpg",
+            "Image/6.jpg", "Image/7.jpg", "Image/8.jpg", "Image/9.jpg", "Image/10.jpg"
+        ];
+
+        const track = document.getElementById("marqueeTrack");
+        if (track) {
+            const infiniteList = [...marqueeImages, ...marqueeImages]; 
+            track.innerHTML = infiniteList.map((src, idx) => `
+                <div class="marquee-item" onclick="openGalleryLightbox(${idx % marqueeImages.length})">
+                    <img src="${src}" alt="Zel Memory">
+                </div>
+            `).join('');
+        }
+
+        let activeImagesList = [];
+        let currentIndex = 0;
+
+        function openGalleryLightbox(index) {
+            activeImagesList = marqueeImages;
+            currentIndex = index;
+            document.getElementById("lightboxImage").src = activeImagesList[currentIndex];
+            document.getElementById("lightboxModal").style.display = "flex";
+            document.querySelectorAll(".lightbox-nav").forEach(el => el.style.display = "block");
+        }
+
+        function openSingleLightbox(imageSrc) {
+            activeImagesList = [imageSrc];
+            currentIndex = 0;
+            document.getElementById("lightboxImage").src = imageSrc;
+            document.getElementById("lightboxModal").style.display = "flex";
+            document.querySelectorAll(".lightbox-nav").forEach(el => el.style.display = "none");
+        }
+
+        function closeLightbox() {
+            document.getElementById("lightboxModal").style.display = "none";
+        }
+
+        function changeSlide(direction) {
+            if (activeImagesList.length <= 1) return;
+            currentIndex += direction;
+            if (currentIndex < 0) currentIndex = activeImagesList.length - 1;
+            if (currentIndex >= activeImagesList.length) currentIndex = 0;
+            document.getElementById("lightboxImage").src = activeImagesList[currentIndex];
+        }
+
+        // Gift Tabs Switching Function (GCash, Metrobank, PayPal)
+        function switchGiftTab(type) {
+            const gcashContent = document.getElementById('content-gcash');
+            const metrobankContent = document.getElementById('content-metrobank');
+            const paypalContent = document.getElementById('content-paypal');
+            
+            if (gcashContent) gcashContent.style.display = 'none';
+            if (metrobankContent) metrobankContent.style.display = 'none';
+            if (paypalContent) paypalContent.style.display = 'none';
+
+            const btnGcash = document.getElementById('btn-gcash');
+            const btnMetrobank = document.getElementById('btn-metrobank');
+            const btnPaypal = document.getElementById('btn-paypal');
+
+            if (btnGcash) { btnGcash.style.background = 'white'; btnGcash.style.color = 'var(--primary-color)'; }
+            if (btnMetrobank) { btnMetrobank.style.background = 'white'; btnMetrobank.style.color = 'var(--primary-color)'; }
+            if (btnPaypal) { btnPaypal.style.background = 'white'; btnPaypal.style.color = 'var(--primary-color)'; }
+
+            const targetContent = document.getElementById('content-' + type);
+            const targetBtn = document.getElementById('btn-' + type);
+
+            if (targetContent) targetContent.style.display = 'block';
+            if (targetBtn) { targetBtn.style.background = 'var(--primary-color)'; targetBtn.style.color = 'white'; }
+        }
+
+        function copyText(text, label) {
+            navigator.clipboard.writeText(text);
+            alert(label + " copied: " + text);
+        }
+
+        function openJoinModal() { document.getElementById("joinModal").style.display = "flex"; }
+        function closeJoinModal() { document.getElementById("joinModal").style.display = "none"; }
+        function closeAdminLogin() { document.getElementById("adminLoginModal").style.display = "none"; }
+        function closeAdminDashboard() { document.getElementById("adminDashboardModal").style.display = "none"; }
+
+        const joinForm = document.getElementById("joinForm");
+        if (joinForm) {
+            joinForm.addEventListener("submit", function(e) {
+                e.preventDefault();
+                const name = document.getElementById("joinNameInput").value;
+                let attendees = JSON.parse(localStorage.getItem("zel_attendees") || "[]");
+                attendees.push({ name: name, date: new Date().toLocaleString() });
+                localStorage.setItem("zel_attendees", JSON.stringify(attendees));
+                alert("Thank you for confirming, " + name + "! See you at the virtual party.");
+                closeJoinModal();
+                this.reset();
+            });
+        }
+
+        // UPDATED FORM HANDLER WITH GOOGLE SHEET INTEGRATION + LOCALSTORAGE BACKUP
+        const messageForm = document.getElementById("messageForm");
+        if (messageForm) {
+            messageForm.addEventListener("submit", function(e) {
+                e.preventDefault();
+                
+                const name = document.getElementById("msgName").value;
+                const text = document.getElementById("msgText").value;
+                const submitBtn = this.querySelector('button[type="submit"]');
+
+                // 1. Save sa LocalStorage para sa site Admin Dashboard
+                let messages = JSON.parse(localStorage.getItem("zel_messages") || "[]");
+                messages.push({ name: name, message: text });
+                localStorage.setItem("zel_messages", JSON.stringify(messages));
+
+                // 2. Send live sa Google Sheet
+                const originalBtnText = submitBtn.innerText;
+                submitBtn.innerText = "Sending...";
+                submitBtn.disabled = true;
+
+                const googleSheetUrl = "https://script.google.com/macros/s/AKfycbzp6AsFLiSF1xAldRix_R-qpnQyyNpoA2GqvDqYVQ4B1YB3X_T4KtjXvWg_UUN_wJcw/exec";
+
+                fetch(googleSheetUrl, {
+                    method: "POST",
+                    mode: "no-cors",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        name: name,
+                        message: text
+                    })
+                })
+                .then(() => {
+                    alert("Thank you for your lovely message, " + name + "!");
+                    messageForm.reset();
+                })
+                .catch(error => {
+                    console.error("Error sending to sheet:", error);
+                    alert("Thank you for your lovely message, " + name + "!");
+                    messageForm.reset();
+                })
+                .finally(() => {
+                    submitBtn.innerText = originalBtnText;
+                    submitBtn.disabled = false;
+                });
+            });
+        }
+
+        let clickCount = 0;
+        function triggerAdminSecret() {
+            clickCount++;
+            if (clickCount === 3) {
+                clickCount = 0;
+                document.getElementById("adminLoginModal").style.display = "flex";
+            }
+            setTimeout(() => { clickCount = 0; }, 1000);
+        }
+
+        const adminLoginForm = document.getElementById("adminLoginForm");
+        if (adminLoginForm) {
+            adminLoginForm.addEventListener("submit", function(e) {
+                e.preventDefault();
+                const user = document.getElementById("adminUser").value;
+                const pass = document.getElementById("adminPass").value;
+                if (user === "admin" && pass === "zel2026") {
+                    closeAdminLogin();
+                    loadAdminData();
+                    document.getElementById("adminDashboardModal").style.display = "flex";
+                    this.reset();
+                } else {
+                    alert("Invalid username or password.");
+                }
+            });
+        }
+
+        function loadAdminData() {
+            const attendees = JSON.parse(localStorage.getItem("zel_attendees") || "[]");
+            const messages = JSON.parse(localStorage.getItem("zel_messages") || "[]");
+            
+            let attHtml = "";
+            attendees.forEach(a => { attHtml += `<tr><td>${a.name}</td><td>${a.date}</td></tr>`; });
+            const attBody = document.getElementById("attendeesTableBody");
+            if (attBody) attBody.innerHTML = attHtml || "<tr><td colspan='2'>No attendees yet.</td></tr>";
+
+            let msgHtml = "";
+            messages.forEach(m => { msgHtml += `<tr><td>${m.name}</td><td>${m.message}</td></tr>`; });
+            const msgBody = document.getElementById("messagesTableBody");
+            if (msgBody) msgBody.innerHTML = msgHtml || "<tr><td colspan='2'>No messages yet.</td></tr>";
+        }
+    </script>
 </body>
 </html>
