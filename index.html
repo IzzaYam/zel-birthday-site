@@ -48,17 +48,17 @@
             animation: floatSparkle 4s ease-in-out infinite;
         }
 
-        /* WELCOME COVER PAGE */
-       #welcome-cover {
+        /* WELCOME COVER PAGE (PC VIEW) */
+        #welcome-cover {
             position: fixed;
             top: 0;
             left: 0;
             width: 100vw;
             height: 100vh;
             background-color: #FDF5F6;
-            background-image: url('Image/FirstPage.jpg'); /* <-- PALITAN MO DITO NG TAMANG FILE PATH NG COVER PHOTO MO */
+            background-image: url('Image/FirstPage.jpg');
             background-size: cover;
-            background-position: center;
+            background-position: center 20%; /* Naka-adjust para kita ang mukha sa PC */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -751,7 +751,7 @@
             position: relative;
         }
 
-        /* PERFECTION MOBILE RESPONSIVE ADJUSTMENTS */
+        /* MOBILE RESPONSIVE ADJUSTMENTS */
         @media (max-width: 768px) {
             html, body {
                 width: 100% !important;
@@ -860,7 +860,7 @@
                 height: auto !important;
             }
 
-            /* COUNTDOWN SECTION - KASYA NA ANG 4 TIMERS */
+            /* COUNTDOWN SECTION */
             .countdown-section {
                 flex-direction: column !important;
                 padding: 15px 10px !important;
@@ -894,7 +894,7 @@
                 letter-spacing: 1px !important;
             }
 
-            /* PARTY DETAILS GRID - 2 COLUMNS SA MOBILE */
+            /* PARTY DETAILS GRID */
             .details-grid {
                 grid-template-columns: repeat(2, 1fr) !important;
                 gap: 10px !important;
@@ -968,11 +968,12 @@
                 height: 110px !important;
             }
 
-            /* WELCOME COVER MOBILE FIX - NAKA-CENTER NA NANG MAAYOS */
+            /* WELCOME COVER MOBILE FIX */
             #welcome-cover {
                 padding: 15px !important;
                 align-items: center !important;
                 justify-content: center !important;
+                background-position: center top !important;
             }
 
             .cover-card {
