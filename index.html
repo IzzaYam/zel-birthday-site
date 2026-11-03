@@ -48,8 +48,9 @@
             animation: floatSparkle 4s ease-in-out infinite;
         }
 
-        /* WELCOME COVER PAGE (PC VIEW) */
-position: fixed;
+        /* WELCOME COVER PAGE */
+        #welcome-cover {
+            position: fixed;
             top: 0;
             left: 0;
             width: 100vw;
@@ -61,8 +62,9 @@ position: fixed;
             display: flex;
             justify-content: center;
             align-items: center;
-            z-index: 99999; /* Mas pinataas pa natin para masiguro na takip ang lahat */
+            z-index: 99999;
             overflow: hidden;
+            transition: opacity 0.8s ease, visibility 0.8s ease;
         }
 
         @keyframes heartbeat {
@@ -128,6 +130,7 @@ position: fixed;
             opacity: 0.9;
             transform: translateY(-3px);
         }
+
         /* Navigation Bar */
         nav {
             display: flex;
